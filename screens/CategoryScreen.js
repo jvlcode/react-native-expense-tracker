@@ -144,7 +144,7 @@ export default function CategoryScreen ({navigation}) {
 					</View>
 				</View>
 		</Modal>
-		<ScrollView >
+		<ScrollView style={{maxHeight:600, marginBottom:80}}>
 				{categories.length > 0 && categories.map((category,index) => <Category index={index} key={index}  name={category.name} color={category.color} /> )
 				 || <Text style={globalStyle.infoTextStyle}>Add Some Categories!{categories.toString()}</Text>
 				}

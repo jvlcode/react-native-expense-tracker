@@ -29,11 +29,11 @@ export default function App() {
 		const budgets = useSelector(state =>  state.budgets);
 		const budget = getCurrentBudget(budgets);
 		return (<Drawer.Navigator  initialRouteName="Home"  screenOptions={{headerShown: false, }}>
-			<Drawer.Screen name="Settings" component={SettingsScreen} />
 			<Drawer.Screen name="Home" component={HomeScreen} />
 			<Drawer.Screen name="Categories" component={CategoryScreen} />
 			{budget &&<Drawer.Screen name="Add Expense" component={AddExpenseScreen} />}
 			{budget &&<Drawer.Screen name="Reports" component={ReportScreen} />}
+			<Drawer.Screen name="Settings" component={SettingsScreen} />
 		</Drawer.Navigator>)
 	}
 	
